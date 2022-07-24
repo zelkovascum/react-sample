@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  front:
+    build:
+      # context: ./reactapp/
+      context: .
+      # dockerfile: Dockerfile
+    # command: sh -c "cd reactapp && yarn start"
+    command: sh -c "yarn start"
+    ports:
+      - "3001:3000"
+    volumes:
+      - .:/app
